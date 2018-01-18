@@ -5,7 +5,7 @@ class Song < ActiveRecord::Base
   validates :title, presence: true
 
   def artist_name
-    Artist.find(self.artist_id)
+    self.artist.name
   end
 
 end
