@@ -32,6 +32,7 @@ class Song < ActiveRecord::Base
      end
      self.notes<<content
    end
+   puts self.notes
  end
 
   def note_contents
