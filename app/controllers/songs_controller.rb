@@ -26,6 +26,10 @@ class SongsController < ApplicationController
     #redirect_to controller: 'songs', action: 'index'
   end
 
+  def edit
+    @song = Song.find(params[:id])
+  end
+
   private
 
   def song_params
