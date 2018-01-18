@@ -30,6 +30,7 @@ class Song < ActiveRecord::Base
      if content.strip != ''
        self.notes.build(content: content)
      end
+     self.notes<<content
    end
  end
 
