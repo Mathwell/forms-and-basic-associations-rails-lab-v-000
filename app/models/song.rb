@@ -4,8 +4,10 @@ class Song < ActiveRecord::Base
   has_many :notes
   #validates :title, presence: true
 
+
+
   def artist_name
-    self.artist.name
+    self.try(:artist).try(:name)
   end
 
   def artist_name=(name)
