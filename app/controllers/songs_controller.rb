@@ -17,7 +17,7 @@ class SongsController < ApplicationController
 
   def create
     p song_params
-    song = Song.new(song_params)
+    @song = Song.new(song_params)
     if @song.save
       redirect_to @song
     else
