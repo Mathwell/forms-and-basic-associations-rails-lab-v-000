@@ -4,4 +4,8 @@ class Song < ActiveRecord::Base
   has_many :notes
   validates :title, presence: true
 
+  def artist_name
+    Artist.find(self.artist_id)
+  end
+
 end
